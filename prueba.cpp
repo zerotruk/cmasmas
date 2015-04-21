@@ -4,26 +4,26 @@
 #include <iostream>
 using namespace std;
 //declaracion de funciones
-int Alumnos(int matricula);
+void Alumnos();// Como se estan ingresando datos, la función no retorna nada
 float Promedio();
 float arreglo[5];
-int matricula;
+int matricula[35];
 main()
 {
-   int Alumnos(matricula);
-   float Promedio();
+	Alumnos(); //Cuando se llama la función NO se dice el tipo de retorno
+	Promedio();//Por eso quité el int y el float
 }
 //llamado matricula del alumno 
-int Alumnos(int matricula)
-   {
-   	  cout<<"por favor ingrese la matricula del alumno"<<endl;
-      cin >>matricula;
-      if(matricula<0 && matricula>35)
-      {
-      	cout<<"Error solo hay 35 estudiantes"<<endl;
-	  }
-      return matricula;
-   }
+void Alumnos()
+{
+	//Al crear un bucle se asegura que los 35 alumnos se ingresen
+	cout<<"por favor ingrese los números de matriculas de cada uno de los estudiantes"<<endl;
+	for(int i=0; i<35;i++){
+		cout<<"Número de matrícula del primer alumno"<<endl;
+		cin>>matricula[i];
+	}
+//Como la función es vacia NO retorna nada
+}
 //calcula promedio
 float Promedio() 
 {
